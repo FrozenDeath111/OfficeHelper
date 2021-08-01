@@ -1,0 +1,205 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    to right top,
+    rgba(0, 255, 242, 0.8),
+    rgba(0, 255, 128, 0.8)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.data-input {
+  border-style: none;
+  background: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.upload-data {
+  border-style: none;
+  background: rgba(0, 0, 0, 0.2);
+  height: 2rem;
+  width: 15rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.glass {
+  height: 80vh;
+  width: 80%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.4)
+  );
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.download-part {
+  height: 80%;
+  width: 90%;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.content-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.content-table thead th {
+  text-align: center;
+}
+
+.content-table tbody tr {
+  text-align: center;
+}
+
+.upload-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  height: 10%;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.file {
+  height: 3rem;
+  width: 3rem;
+  margin: 2rem 0rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid (255, 255, 255, 0.8);
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 149, 0.8),
+    rgba(255, 255, 255, 0.4),
+    rgba(0, 255, 149, 0.8)
+  );
+}
+
+.file {
+  height: 3rem;
+  width: 3rem;
+  margin: 2rem 0rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 149, 0.8),
+    rgba(255, 255, 255, 0.4),
+    rgba(0, 255, 149, 0.8)
+  );
+}
+
+.file:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 0, 0, 0.8)
+  );
+}
+
+.btn {
+  border-style: none;
+  height: 3rem;
+  width: 3rem;
+  background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(0, 26, 255, 0.5));
+  border-radius: 50%;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 0, 0, 0.5));
+}
+
+.data-btn, .serial-btn {
+  border-style: none;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  width: 50%;
+  cursor: pointer;
+}
+
+.data-btn:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.logout {
+  position: absolute;
+  bottom: 2.5%;
+  right: 10%;
+}
+
+.logout-to-main {
+  position: absolute;
+  bottom: 2.5%;
+  left: 10%;
+}
+
+.btn-leave {
+  cursor: pointer;
+  min-height: 3rem;
+  min-width: 8rem;
+  border-style: none;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 166, 0, 0.6),
+    rgba(255, 0, 0, 0.8)
+  );
+  font-weight: 600;
+  font-size: 15px;
+  color: rgba(90, 0, 0, 1);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-leave:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 1),
+    rgba(255, 166, 0, 0.8),
+    rgba(255, 0, 0, 1)
+  );
+  color: rgb(0, 0, 0);
+}

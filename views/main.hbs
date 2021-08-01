@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=".\css\main.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <title>OnLineOn</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="userprofile">
+                <div>
+                <img class="profile" src=".\images\Holo Globe.png" alt="">
+                <h3>Name: {{name}}</h3>
+                <h3>Designation: {{designation}}</h3>
+                </div>
+                <div class="btn1">
+                    <img class="icons" src=".\icons\user-shape.png" alt="">
+                    <h3 class="btn1title">E-mail: {{email}}</h3>
+                </div>
+                <div class="btn1">
+                    <img class="icons" src=".\icons\telephone.png" alt="">
+                    <h3 class="btn1title">Security Tier: {{tier}}</h3>
+                </div>
+                <div class="btn1">
+                    <img class="icons" src=".\icons\assistance.png" alt="">
+                    <h3 class="btn1title">ID: {{id}}</h3>
+                </div>
+                <form action="/" method="get">
+                    <button class="btn" type="submit"><span>Log Out</span></button>
+                </form>
+            </div>
+            <div class="worksection">
+                <div class="tabs" id="notice">
+                    <form class="join-create" action="/notice/{{id}}" method="GET">
+                        <button class="tab-btn" id="create-sec" type="submit"><h2>Notice</h2></button>
+                    </form>
+                </div>
+                <div class="tabs" id="meeting">
+                    <form class="join-create" action="/room/{{id}}" method="GET">
+                        <button class="tab-btn" id="create-sec" type="submit"><h2>Create/Join</h2></button>
+                    </form>
+                </div>
+                <div class="tabs" id="fileshare">
+                    <form class="join-create" action="/fileshare/{{id}}" method="GET">
+                        <button class="tab-btn" id="create-sec" type="submit"><h2>File Share</h2></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src=".\js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <title>Room</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="chatbox-create" id="c-box">
+                <div class="room-and-button">
+                    <form class="room" id="room" action="/chat-join" method="POST">
+                        <label for="room-name">Room</label>
+                        <input type="text" maxlength="10" id="room-name" name="room">
+                        <label for="room-pass">Password</label>
+                        <input type="text" maxlength="10" id="room-pass" name="pass">
+                        <input type="text" value={{id}} name="id" style="display: none">
+                        {{#if success}}
+                            {{else}}<h3>Invalid Room or Password</h3>
+                        {{/if}}
+                        <input type="submit" id="submit-form">
+                    </form>
+                    <div class="create-button">
+                        {{!-- <button class="btn3" id="create" type="submit" form="room">Create/Join</button> --}}
+                        <label for="submit-form" class="btn3">Create/Join</label>
+                        <form class="btn3" action="/main/{{id}}" method="GET">
+                            <button class="spare" id="closeC" type="submit"><span>Close</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

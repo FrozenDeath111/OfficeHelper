@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\login.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="loginspace">
+                <div class="outerspace">
+                    <img class="usericon" src="icons\user-shape.png" alt="">
+                    <h3>User Login</h3>
+                </div>
+                <form class="innerspace" action="/login" method="post" id="login-form">
+                    <label for="userid">User ID</label>
+                    <input class="holder" type="text" id="userid" name="userid" placeholder="Enter Username" value=''>
+                    <label for="password">Password</label>
+                    <input class="holder" type="text" id="password" name="password" placeholder="Enter Password" value=''>
+                    <button class="button" type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        {{#if success}}
+            {{!-- <h3>{{message}}</h3> --}}
+            {{else}} <h3>Unsuccessful Login</h3>
+        {{/if}}
+    </main>
+    <script src="js/loginfe.js"></script>
+</body>
+</html>

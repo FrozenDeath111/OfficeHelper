@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/fileshare.css">s
+    <title>File Share</title>
+</head>
+<body>
+    <main>
+        <section class="glass">
+            <div class="download-part">
+                <table class="content-table" id="table">
+                    <thead>
+                        <tr> 
+                            <th>File Name</th>
+                            <th>Sender</th>
+                            <th>Download</th>
+                            <th>Remove</th>
+                        </tr> 
+                    </thead>
+                    {{!-- <tbody>
+                        <tr>
+                            <form action="/download/{{id}}" method="get">
+                            <td><input type="text" class="data-input" name="filename" value="i_am_an_idiot.PNG" readonly></td>
+                            <td><input type="text" class="data-input" style="max-width: 3rem;" name="sender" value="101" readonly></td>
+                            <td><button class="data-btn" type="submit"><img src=".\icons\icons8-download-16.png" alt="downlaod"></button></td>
+                            </form>
+                            <form class="form_iter">
+                            <input type="text" style="display: none;" id="serial1" style="max-width: 3rem;" name="fileno" value="1">
+                            <td><button class="data-btn" id="btn1" type="submit"><img src=".\icons\icons8-trash-16.png" c</button></td>
+                            </form>
+                        </tr>
+                    </tbody> --}}
+                </table>
+            </div>
+            <div class="upload-part">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="from" class="file">From</label>
+                    <input type="text" class="upload-data" id="from" style="max-width: 4rem; background:white;" name="sender" value="{{id}}" readonly>
+                    <label for="to-give" class="file">To</label>
+                    <input type="text" class="upload-data" style="width: 5rem;" id="togive" name="togive" required>
+                    <label for="file-upload" class="file" id="filename">
+                        <input type="file" name="uploader" id="file-upload" required>Browse
+                    </label>
+                    <input type="text" class="upload-data" readonly id="file-name">
+                    <button class="btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <form class="logout-to-main" action="/main/{{id}}" method="get">
+        <button class="btn-leave">To Main</button>
+    </form>
+    <form class="logout" action="/" method="get">
+        <button class="btn-leave">LogOut</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/fileshare.js"></script>
+</body>
+</html>
